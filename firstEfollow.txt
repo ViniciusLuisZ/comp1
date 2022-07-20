@@ -1,0 +1,4 @@
+First (E) = {}
+First (T) = {}
+First (P) = {}
+First (F) = {(, id)}
