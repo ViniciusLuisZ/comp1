@@ -1,4 +1,16 @@
-First (E) = {}
-First (T) = {}
-First (P) = {}
+Não terminais = E, T, P, F
+Terminais = +, -, *, /, ^, exp, [, ] ,( ,) ,id
+
+First (E) = {+, -, *, /, ^, exp, (, id}
+First (T) = {*, /, ^, exp, (, id}
+First (P) = {^, exp, (, id}
 First (F) = {(, id)}
+
+
+FOLLOW[E] = + - ) $
+
+FOLLOW[T] = * / + - ) $
+
+FOLLOW[P] = ^ * / + - ) $
+
+FOLLOW[F] = ] ^ * / + - ) $
