@@ -48,9 +48,6 @@ class Sintatico:
                        '$': {'E': [], 'T': [], 'P': [], 'F': []},
                        }
 
-    def retorna_texto(self):
-        return self.texto
-
     def popula_tabela(self):
         self.configura_first_follow()
         for regra in self.linhas:

@@ -1,36 +1,15 @@
-
-
-import java.util.ArrayList;
-
-import assistants.LexScanner;
-import assistants.Token;
-import assistants.SyntheticAnalytic
 from lexico import Lexico
 from sintatico import Sintatico;
 
-public class App {
-
-    static ArrayList<Token> entrada = new ArrayList<Token>();
-    private static SyntheticAnalytic syntheticAnalytic;
-
-    public static void main(String[] args) {
-        LexScanner scan = new LexScanner("input.txt");
-        Token token = null;
-        syntheticAnalytic = new SyntheticAnalytic();
-        do {
-            token = scan.nextToken();
-            entrada.add(token);
-            System.out.println(token);
-        } while (token != null);
-        entrada.remove(entrada.size()-1);
-        entrada.remove(entrada.size()-1);
-        syntheticAnalytic.AnalyticalDecision(entrada);
-    }
-}
-
-
-def app():
-    a = Lexico('exemplo.txt')
-
-    Lexico()
-    Sintatico()
+tokens = []
+a = Lexico('exemplo.txt')
+file = open("exemplo.txt", "r")
+data = file.read()
+number_of_characters = len(data)
+print('Número de caracteres :', number_of_characters)
+for i in range(number_of_characters-6):
+    tokens.append(a.retorna_token())
+    
+print (tokens)    
+Sintatico(tokens)
+        

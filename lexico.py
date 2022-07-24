@@ -29,8 +29,8 @@ class Lexico:
                 self.indice += pos + len(token)
                 return (token)
 
-
-a = Lexico('exemplo.txt')
+"""
+tokens = Lexico('exemplo.txt')
 
 file = open("exemplo.txt", "r")
 data = file.read()
@@ -38,6 +38,7 @@ number_of_characters = len(data)
 
 print('Número de caracteres :', number_of_characters)
 
-# achar uma forma de não ficar hard coded aqui
 for i in range(number_of_characters):
-    print (a.retorna_token())
+    print (tokens.retorna_token())
+    
+"""
