@@ -1,6 +1,5 @@
 import os
 
-
 def split_manual(linha, caracter):
     linha_splitada = []
     palavra = ''
@@ -16,25 +15,20 @@ def split_manual(linha, caracter):
 
 
 def remove_caracter(linha, caracter):
-    palavra_final = ''
+    final = ''
     for letra in linha:
         if letra == caracter:
             pass
         else:
-            palavra_final += letra
-    return palavra_final
+            final += letra
+    return final
 
 
 class Sintatico:
     def __init__(self):
-        self.patch_gramatica = os.getcwd().replace('src', '') + 'texts\\gramatica.txt'
-        self.patch_first_follow = os.getcwd().replace('src', '') + 'texts\\firstFollow.txt'
+        self.patch_first_follow = os.getcwd().replace('src', '') + 'texts\\firstEfollow.txt'
         self.linhas = []
         self.first_follow = []
-        with open(self.patch_gramatica, 'r') as f:
-            for line in f:
-                self.linhas.append(split_manual(line, ' '))
-            self.texto = f.read()
         with open(self.patch_first_follow, 'r') as f:
             for line in f:
                 self.first_follow.append(split_manual(line, ' '))

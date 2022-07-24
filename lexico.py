@@ -1,18 +1,3 @@
-
-tabelaSimbolo={
-    "+":"op_ad",
-    "-":"op_ad",
-    "*":"op_mul",
-    "/":"op_mul",
-    "=":"relacao",
-    "(":"(",
-    ")":")",
-    "[":"[",
-    "]":"]",
-    "exp":"op_pot",
-    "^":"op_pot2",
-}
-
 class Lexico:
     def __init__(self, arq):
         with open(arq, 'r') as f:
@@ -53,6 +38,6 @@ number_of_characters = len(data)
 
 print('Número de caracteres :', number_of_characters)
 
-# achar uma forma de não ficar hardcoded aqui
+# achar uma forma de não ficar hard coded aqui
 for i in range(number_of_characters):
     print (a.retorna_token())
